@@ -1,0 +1,75 @@
+body,html{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: auto !important;
+    height: auto!important;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 50px;
+    bottom: 10px;
+}
+.title-box {
+    /*border: 1px solid #ccc;*/
+    border-bottom: 0;
+    /*width: 958px;*/
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /*bottom: 0;*/
+    top: 10px;
+    height: 50px;
+}
+
+.title-input {
+    width: 30%;
+    padding: 10px 20px 0px 40px;
+    margin-bottom: 0;
+    border: none;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #595959;
+    background-color: transparent;
+    outline: none;
+    border-radius: 0;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.type {
+    width: 30%;
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 0;
+    border: none;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #595959;
+    background-color: transparent;
+    outline: none;
+    border-radius: 0;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.save {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    z-index: 99999;
+    font-size: 16px;
+}

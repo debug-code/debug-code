@@ -1,0 +1,36 @@
+
+
+
+.tag-list{
+    margin-right: 0.5em;
+    color: #787878;
+}
+.tag-list{
+    margin-right: 0.5em;
+    color: #787878;
+}
+.tag-list i{
+    margin-right:0.5em;
+}
+.tag-name{
+    margin-right:0.5em;
+    color: #787878;
+}
+
+.more{
+    width: 80%;
+    line-height: 2em;
+    height: 2em;
+    border-radius: 0.8em;
+    background-color: #a5a5a5;
+    margin: 3em auto;
+    text-align: center;
+    color: #fff;
+
+}
+.more:hover{
+    background-color: #9b9b9b;
+}
+.more a{
+    color: #fff;
+}

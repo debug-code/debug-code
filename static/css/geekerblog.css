@@ -1,0 +1,80 @@
+/*导航条 */
+.head {
+    height: 50px;
+    width: 100%;
+    background: #2d2d2d;
+}
+
+.head-logo-text {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    line-height: 50px;
+    font-size: 27px;
+    margin-left: 27px;
+    /*font-family: "Baskerville";*/
+    font-family: "Microsoft YaHei";
+}
+
+/*底部版权*/
+
+.footer{
+    width: 100%;
+    /*position: fixed;*/
+    /*bottom: 0em;*/
+}
+.copyright{
+    margin: 2em 0;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+.copyright a {
+    color: #34495e;/*#428bca;*/
+    text-decoration: none;
+}
+
+/*文章格式*/
+.article a {
+    color: #34495e;/*#428bca;*/
+    text-decoration: none;
+}
+.article blockquote {
+    display: block;
+    border-left: 8px solid #888;/*#fbe106;*/
+    padding: 5px 10px;
+    margin: 10px 0;
+    line-height: 1.4;
+    font-size: 100%;
+    background-color: #f1f1f1;
+}
+.content {
+    width: 100%;
+}
+.container{
+    margin:2em 10px;
+    /*border: 1px solid red;*/
+}
+.content-list{
+    /*margin: 2em 0;*/
+    margin: 2em 2em;
+}
+.content-list .content-list-item{
+    padding: 1em 0 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+/*宽度适配*/
+@media screen and (min-width: 960px) {
+    .content {
+        width:960px;
+        margin:0 auto
+    }
+}
+@media screen and (max-width: 780px) {
+    .content {
+        width:780px;
+        margin:0 auto
+    }
+}
