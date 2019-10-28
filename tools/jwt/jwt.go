@@ -17,7 +17,7 @@ func GetNewToken(secret []byte, info string) (string, error) {
 	// Create the Claims
 	claims := &jwt.StandardClaims{
 		Id:        info,
-		ExpiresAt: int64(time.Now().Unix() + 1000),
+		ExpiresAt: int64(time.Now().Unix() + 1800),
 		Issuer:    "demo",
 	}
 
@@ -63,8 +63,8 @@ func CheckToken(secret []byte, token string) ResultToken {
 	return res
 }
 
-func GetTokenInfo(token string) (string, error) {
-	mySigningKey := []byte("hzwy23")
+func GetTokenInfo(secret []byte, token string) (string, error) {
+	mySigningKey := secret
 	t, err := jwt.ParseWithClaims(token, &jwt.StandardClaims{}, func(*jwt.Token) (interface{}, error) {
 		return mySigningKey, nil
 	})

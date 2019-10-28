@@ -31,6 +31,7 @@ type Article struct {
 	Type            string `json:"type"`
 	CreateTime      int    `json:"create_time"`
 	UpdateTime      int    `json:"update_time"`
+	Like            int    `json:"like"`
 	ContentMarkdown string `json:"content_markdown"`
 	ContentHtml     string `json:"content_html"`
 }

@@ -3,13 +3,13 @@ package lib
 import (
 	"geekerblog/models"
 	ep "geekerblog/tools/encryption"
+	"geekerblog/tools/goDB/mysql"
 	"github.com/astaxie/beego"
-	"github.com/debug-code/goDB/mysql"
 	"strconv"
 	"time"
 )
 
-func SaveArticle(article models.Article) error {
+func SaveArticle(article models.Article) (models.Article, error) {
 
 	article.CreateTime = int(time.Now().Unix())
 	article.UpdateTime = article.CreateTime
@@ -21,17 +21,17 @@ func SaveArticle(article models.Article) error {
 	db, err := mysql.Context()
 	if err != nil {
 		beego.Error("fac err:", err)
-		return err
+		return article, err
 	}
 	defer mysql.ReleaseC(db)
 
 	db.Create(&article)
 	if db.Error != nil {
 		beego.Error(db.Error)
-		return err
+		return article, err
 	}
 
-	return nil
+	return article, nil
 }
 
 func GetArticle(uid string, offset, limit int) (interface{}, error) {
@@ -51,12 +51,16 @@ func GetArticle(uid string, offset, limit int) (interface{}, error) {
 	}
 
 	counts := 0
-	temp := db.Where("status != 0").Offset(offset)
+	temp := db.Where("status != 0")
+	temp.Find(&list).Count(&counts)
+
+	temp = temp.Offset(offset)
+
 	if limit != 0 {
 		temp = temp.Limit(limit)
 	}
 
-	temp.Order("update_time desc").Find(&list).Count(&counts)
+	temp.Order("update_time desc").Find(&list)
 	if db.Error != nil {
 		beego.Error("GetArticle() db.Find(&list)err:", db.Error)
 		return list, err

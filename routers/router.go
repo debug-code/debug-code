@@ -2,7 +2,10 @@ package routers
 
 import (
 	"geekerblog/controllers"
+	"geekerblog/lib"
+	"geekerblog/tools/jwt"
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/context"
 	"github.com/astaxie/beego/plugins/cors"
 )
 
@@ -17,11 +20,35 @@ func init() {
 		AllowCredentials: true,
 	}))
 
+	//token check
+	var checkToken = func(ctx *context.Context) {
+
+		mySigningKey := []byte("hzwy23")
+		token := ctx.Request.Header.Get("Authorization")
+		//fmt.Println("Authorization", token)
+
+		if token == "" {
+			rmsg := lib.RetrunMessage("401.1", "token失效或错误", nil)
+			ctx.Output.JSON(&rmsg, true, false)
+			return
+		}
+		resToken := jwt.CheckToken(mySigningKey, token)
+		if resToken.Valid {
+			//token ok
+			return
+		} else {
+			rmsg := lib.RetrunMessage("401.1", "token失效或错误", nil)
+			ctx.Output.JSON(&rmsg, true, false)
+			return
+		}
+
+	}
+
 	//static
-	beego.SetStaticPath("/static", "static")
+	beego.InsertFilter("/api/*", beego.BeforeRouter, checkToken)
+	beego.InsertFilter("/static", beego.BeforeRouter, checkToken)
 
 	//views
-	beego.Router("/view/index", &controllers.IndexController{})
 
 	//Test
 	beego.Router("/open/test", &controllers.TestController{})
@@ -29,6 +56,9 @@ func init() {
 	//open
 	//login
 	beego.Router("/open/login", &controllers.LoginController{})
+	//articles
+	beego.Router("/open/articles/?:id", &controllers.OpenArticlesController{})
+
 	//ip search info
 	beego.Router("/open/ip/?:ip", &controllers.IpToolController{})
 
@@ -41,7 +71,7 @@ func init() {
 	//articleTypes
 	beego.Router("/api/articleTypes/?:id", &controllers.ArticleTypeController{})
 
-	//tools
-	//sql to go struct
-	beego.Router("/tools/stgs/?:id", &controllers.StgsController{})
+	//token
+	beego.Router("/api/token", &controllers.TokenController{})
+
 }

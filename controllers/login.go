@@ -5,10 +5,7 @@ import (
 	"fmt"
 	"geekerblog/lib"
 	"geekerblog/models"
-	"geekerblog/tools/jwt"
 	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/orm"
-	"strconv"
 )
 
 type LoginController struct {
@@ -17,64 +14,34 @@ type LoginController struct {
 
 func (this *LoginController) Post() {
 
+	beego.Info("/open/login Post")
 	//get data
 	body := this.Ctx.Input.RequestBody
-	beego.Info("body", string(body))
-
 	manager := models.Manager{}
 	err := json.Unmarshal(body, &manager)
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	//search manager from database
-	o := orm.NewOrm()
-	managerS := models.Manager{}
-	err = o.QueryTable("manager").Filter("status", 1).
-		Filter("account", manager.Account).One(&managerS)
-	//fmt.Println(managerS)
-	if err != nil || manager.Account != managerS.Account || managerS.Account == "" {
-		beego.Error(err)
-		lib.ReturnJson(this.Controller, "0", err)
-		return
-	}
-	if manager.Passwd != managerS.Passwd {
-		beego.Error(err)
-		lib.ReturnJson(this.Controller, "0", err)
+	//check data
+	check, err := lib.CheckManager(manager)
+	if err != nil {
+		beego.Error(" lib.CheckManager(manager) error :", err)
+		lib.ReturnJson(this.Controller, "-1", check)
 		return
 	}
 
-	//jwt
-	mySigningKey := []byte("hzwy23")
-	ss, err := jwt.GetNewToken(mySigningKey, strconv.Itoa(managerS.Id))
+	//get token
+	token, err := lib.GetToken(check)
 	if err != nil {
-		lib.ReturnJson(this.Controller, "0", err)
+		beego.Error(" lib.GetToken() error :", err)
+		lib.ReturnJson(this.Controller, "-1", check)
 		return
 	}
 
 	//return
 	res := map[string]string{}
-	res["token"] = ss
+	res["token"] = token
 	lib.ReturnJson(this.Controller, "1", res)
 	return
-}
-func (this *LoginController) Get() {
-
-	tokens := this.Ctx.Input.Context.Request.Header.Get("Authorization")
-	id, _ := jwt.GetTokenInfo(tokens)
-
-	//jwt
-	mySigningKey := []byte("hzwy23")
-	ss, err := jwt.GetNewToken(mySigningKey, id)
-	if err != nil {
-		lib.ReturnJson(this.Controller, "0", err)
-		return
-	}
-
-	//登录成功返回信息
-	res := map[string]string{}
-	res["token"] = ss
-	lib.ReturnJson(this.Controller, "1", res)
-	return
-
 }

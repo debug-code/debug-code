@@ -23,6 +23,12 @@ func RetrunMessage(code string, message string, data interface{}) ReturnMsg {
 func ReturnJson(this beego.Controller, code string, data interface{}) {
 
 	msg := ReturnCodeMsg(code)
+
+	if code == "-1" {
+		msg = data.(string)
+		data = nil
+	}
+
 	rmsg := RetrunMessage(code, msg, data)
 	this.Data["json"] = &rmsg
 	this.ServeJSON()

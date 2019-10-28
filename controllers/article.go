@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"encoding/json"
+	"fmt"
 	"geekerblog/lib"
 	"geekerblog/models"
 	"github.com/astaxie/beego"
@@ -23,22 +24,25 @@ func (this *ArticleController) Post() {
 		return
 	}
 
-	err = lib.SaveArticle(article)
+	article, err = lib.SaveArticle(article)
 	if err != nil {
 		beego.Error("lib.SaveArticle(articleType) err:", err)
 		lib.ReturnJson(this.Controller, "444003", nil)
 		return
 	}
 
-	lib.ReturnJson(this.Controller, "1", nil)
+	lib.ReturnJson(this.Controller, "1", article)
 	return
 }
 
 func (this *ArticleController) Get() {
 	//get data
+
 	uid := this.Ctx.Input.Param(":id")
 	offset, _ := strconv.Atoi(this.GetString("offset"))
 	limit, _ := strconv.Atoi(this.GetString("limit"))
+
+	fmt.Println("uid", uid)
 
 	list, err := lib.GetArticle(uid, offset, limit)
 	if err != nil {
@@ -75,6 +79,10 @@ func (this *ArticleController) Put() {
 func (this *ArticleController) Delete() {
 	uid := this.Ctx.Input.Param(":id")
 
+	if uid == "" {
+		lib.ReturnJson(this.Controller, "-1", "文章选择错误")
+		return
+	}
 	err := lib.DeleteArticle(uid)
 	if err != nil {
 		beego.Error("lib.SaveArticle(articleType) err:", err)
