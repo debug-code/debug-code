@@ -1,7 +1,7 @@
 package goDB
 
 import (
-	"github.com/go-errors/errors"
+	"errors"
 	"github.com/jinzhu/gorm"
 	"sync"
 	"time"
