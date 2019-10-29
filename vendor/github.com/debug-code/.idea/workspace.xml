@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3975ac9b-9639-46ea-8b93-534200d8e8fb" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goDB/mysql/init_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="760">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goDB/pool.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="12" selection-start-column="8" selection-end-column="12" />
+              <folding>
+                <element signature="n#!!block;n#NewGenericPool#0" />
+                <element signature="n#!!block;n#Acquire#0" />
+                <element signature="n#!!block;n#getOrCreate#0" />
+                <element signature="n#!!block;n#Release#0" />
+                <element signature="n#!!block;n#Close#0" />
+                <element signature="n#!!block;n#Shutdown#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/goDB/mysql/init.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="17" selection-start-line="17" selection-end-line="48" />
+              <folding>
+                <element signature="n#!!block;n#Regist#0" />
+                <element signature="n#!!block;n#Context#0" />
+                <element signature="n#!!block;n#CloseC#0" />
+                <element signature="n#!!block;n#ReleaseC#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>numOpen</find>
+    </findStrings>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/alpha" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/goDB/pool.go" />
+        <option value="$PROJECT_DIR$/timedtask/timedtask.go" />
+        <option value="$PROJECT_DIR$/goDB/init_test.go" />
+        <option value="$PROJECT_DIR$/goDB/init.go" />
+        <option value="$PROJECT_DIR$/goDB/mysql/init.go" />
+        <option value="$PROJECT_DIR$/goDB/mysql/init_test.go" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="45" />
+    <option name="y" value="40" />
+    <option name="width" value="1557" />
+    <option name="height" value="958" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="debug-code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="debug-code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="debug-code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="debug-code" type="462c0819:PsiDirectoryNode" />
+              <item name="goDB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="debug-code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="debug-code" type="462c0819:PsiDirectoryNode" />
+              <item name="timedtask" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/goDB/mysql" />
+      <recent name="$PROJECT_DIR$/goDB" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Test.TestRegist in github.com/debug-code/goDB/mysql">
+    <configuration name="go build init.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="debug-code" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/goDB/init.go" />
+      <package value="github.com/debug-code" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestRegist in github.com/debug-code/goDB" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="debug-code" />
+      <working_directory value="$PROJECT_DIR$/goDB" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/debug-code/goDB" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestRegist$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestRegist in github.com/debug-code/goDB/mysql" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="debug-code" />
+      <working_directory value="$PROJECT_DIR$/goDB/mysql" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/debug-code/goDB/mysql" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestRegist$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestRegist in github.com/debug-code/goDB/mysql" />
+        <item itemvalue="Go Test.TestRegist in github.com/debug-code/goDB" />
+        <item itemvalue="Go Build.go build init.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestRegist_in_github_com_debug-code_goDB - 2019.07.23 at 16h 45m 31s.xml">
+      <configuration name="TestRegist in github.com/debug-code/goDB" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRegist_in_github_com_debug-code_goDB - 2019.07.23 at 16h 46m 17s.xml">
+      <configuration name="TestRegist in github.com/debug-code/goDB" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRegist_in_github_com_debug-code_goDB - 2019.07.23 at 16h 46m 25s.xml">
+      <configuration name="TestRegist in github.com/debug-code/goDB" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRegist_in_github_com_debug-code_goDB - 2019.07.23 at 16h 47m 39s.xml">
+      <configuration name="TestRegist in github.com/debug-code/goDB" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRegist_in_github_com_debug-code_goDB - 2019.07.23 at 16h 50m 10s.xml">
+      <configuration name="TestRegist in github.com/debug-code/goDB" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRegist_in_github_com_debug-code_goDB - 2019.07.23 at 16h 54m 05s.xml">
+      <configuration name="TestRegist in github.com/debug-code/goDB" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRegist_in_github_com_debug-code_goDB - 2019.07.23 at 17h 04m 14s.xml">
+      <configuration name="TestRegist in github.com/debug-code/goDB" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRegist_in_github_com_debug-code_goDB - 2019.08.05 at 12h 07m 59s.xml">
+      <configuration name="TestRegist in github.com/debug-code/goDB" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRegist_in_github_com_debug-code_goDB_mysql - 2019.08.05 at 14h 15m 35s.xml">
+      <configuration name="TestRegist in github.com/debug-code/goDB/mysql" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRegist_in_github_com_debug-code_goDB_mysql - 2019.08.05 at 14h 16m 11s.xml">
+      <configuration name="TestRegist in github.com/debug-code/goDB/mysql" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="45" y="40" width="1557" height="958" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2528053" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31062356" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Translate" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/timedtask/timedtask.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#19#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goDB/mysql/init_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goDB/pool.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="8" selection-end-column="12" />
+          <folding>
+            <element signature="n#!!block;n#NewGenericPool#0" />
+            <element signature="n#!!block;n#Acquire#0" />
+            <element signature="n#!!block;n#getOrCreate#0" />
+            <element signature="n#!!block;n#Release#0" />
+            <element signature="n#!!block;n#Close#0" />
+            <element signature="n#!!block;n#Shutdown#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goDB/mysql/init.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="17" selection-start-line="17" selection-end-line="48" />
+          <folding>
+            <element signature="n#!!block;n#Regist#0" />
+            <element signature="n#!!block;n#Context#0" />
+            <element signature="n#!!block;n#CloseC#0" />
+            <element signature="n#!!block;n#ReleaseC#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
