@@ -1,10 +1,10 @@
 package main
 
 import (
-	db "geekerblog/tools/goDB/mysql"
+	db "debug-code/tools/goDB/mysql"
 
 	//"debug-code.com/models"
-	_ "geekerblog/routers"
+	_ "debug-code/routers"
 	"github.com/astaxie/beego"
 	_ "github.com/go-sql-driver/mysql"
 	"time"

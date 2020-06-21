@@ -1,8 +1,8 @@
 package lib
 
 import (
-	"geekerblog/models"
-	ep "geekerblog/tools/encryption"
+	"debug-code/models"
+	ep "debug-code/tools/encryption"
 	"github.com/astaxie/beego"
 	"github.com/debug-code/goDB/mysql"
 	"strconv"

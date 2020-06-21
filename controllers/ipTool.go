@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"geekerblog/lib"
+	"debug-code/lib"
 	"github.com/astaxie/beego"
 )
 

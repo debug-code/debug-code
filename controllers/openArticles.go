@@ -1,8 +1,8 @@
 package controllers
 
 import (
+	"debug-code/lib"
 	"fmt"
-	"geekerblog/lib"
 	"github.com/astaxie/beego"
 	"strconv"
 )
@@ -27,6 +27,7 @@ func (this *OpenArticlesController) Get() {
 		return
 	}
 
+	fmt.Println(list)
 	lib.ReturnJson(this.Controller, "1", list)
 	return
 }

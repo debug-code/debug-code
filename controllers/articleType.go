@@ -1,9 +1,9 @@
 package controllers
 
 import (
+	"debug-code/lib"
+	"debug-code/models"
 	"encoding/json"
-	"geekerblog/lib"
-	"geekerblog/models"
 	"github.com/astaxie/beego"
 )
 

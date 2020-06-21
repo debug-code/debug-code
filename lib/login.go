@@ -1,10 +1,10 @@
 package lib
 
 import (
+	"debug-code/models"
+	"debug-code/tools/goDB/mysql"
+	"debug-code/tools/jwt"
 	"errors"
-	"geekerblog/models"
-	"geekerblog/tools/goDB/mysql"
-	"geekerblog/tools/jwt"
 	"github.com/astaxie/beego"
 )
 

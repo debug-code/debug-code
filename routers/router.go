@@ -1,9 +1,9 @@
 package routers
 
 import (
-	"geekerblog/controllers"
-	"geekerblog/lib"
-	"geekerblog/tools/jwt"
+	"debug-code/controllers"
+	"debug-code/lib"
+	"debug-code/tools/jwt"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/context"
 	"github.com/astaxie/beego/plugins/cors"
@@ -49,6 +49,7 @@ func init() {
 	beego.InsertFilter("/static", beego.BeforeRouter, checkToken)
 
 	//views
+	beego.Router("/open/push", &controllers.PushController{})
 
 	//Test
 	beego.Router("/open/test", &controllers.TestController{})
